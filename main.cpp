@@ -30,18 +30,18 @@ int main(int argc, char *argv[])
    Matrix B = Matrix(N,N,gen_rand(N*N));
    Matrix C = Matrix(N,N,gen_rand(N*N));
    
-   std::cout << "Matrix A" << std::endl;
-   A.print();
-   std::cout << "Matrix B" << std::endl;
-   B.print();
-   std::cout << "Matrix C" << std::endl;
-   C.print();
+   //std::cout << "Matrix A" << std::endl;
+   //A.print();
+   //std::cout << "Matrix B" << std::endl;
+   //B.print();
+   //std::cout << "Matrix C" << std::endl;
+   //C.print();
    
-   std::cout << "Matrix D = A*B+C" << std::endl;
+   //std::cout << "Matrix D = A*B+C" << std::endl;
    Matrix D = A*B+C;
-   D.print();
+   //D.print();
   
-   std::cout << "Diag of Matrix D " << std::endl;
+   std::cout << "Diag of Matrix D = A*B+C" << std::endl;
    std::cout << D.diag() << std::endl;
   
    return 0;
