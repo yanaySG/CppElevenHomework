@@ -20,8 +20,9 @@ double* gen_rand(int N)
 /** MAIN HERE ******************************/
 int main(int argc, char *argv[])
 {
+   auto start = std::chrono::high_resolution_clock::now();
+
    
-        
    int N=2;
    if (argc > 1)
       N=std::stoi(argv[1]);
@@ -37,12 +38,21 @@ int main(int argc, char *argv[])
    //std::cout << "Matrix C" << std::endl;
    //C.print();
    
-   //std::cout << "Matrix D = A*B+C" << std::endl;
+   auto start1 = std::chrono::high_resolution_clock::now();
+
    Matrix D = A*B+C;
-   //D.print();
   
+   auto end1 = std::chrono::high_resolution_clock::now();
+   std::chrono::duration<double> diff1 = end1-start1;
+   std::cout << "Expression calculation time: " << diff1.count() << "s." << std::endl;
+   
    std::cout << "Diag of Matrix D = A*B+C" << std::endl;
    std::cout << D.diag() << std::endl;
   
+  
+   auto end = std::chrono::high_resolution_clock::now();
+   std::chrono::duration<double> diff = end-start;
+   std::cout << "Total time: " << diff.count() << "s." << std::endl;
+
    return 0;
 }
