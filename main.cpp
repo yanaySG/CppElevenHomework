@@ -42,7 +42,7 @@ int main(int argc, char *argv[])
   
    auto end1 = std::chrono::high_resolution_clock::now();
 
-   std::cout << "Calculated matrix D = A*B+C." << N << std::endl;
+   std::cout << "Calculated matrix D = A*B+C." << std::endl;
   
    std::cout << "Diagonal of matrix D = " << D.diag() << std::endl<< std::endl;
    auto end = std::chrono::high_resolution_clock::now();
