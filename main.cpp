@@ -23,7 +23,7 @@ int main(int argc, char *argv[])
 {
   auto start = std::chrono::high_resolution_clock::now();
 
-  int N=1000;
+  int N=2;
    try{
       if (argc > 1)
         N=std::stoi(argv[1]);
