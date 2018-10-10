@@ -26,8 +26,6 @@ class Matrix {
 
         int rows() const { return R; }
         int cols() const { return C; }
-        double* buffer() const {return B;}
-        void setbuffer(const double* buff);
         void print();
         double diag();
 
