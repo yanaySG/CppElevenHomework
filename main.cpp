@@ -1,5 +1,6 @@
 
 #include "matrix.h"
+#include <chrono>
 
 /**  GENERATE RANDNUMS (NORM DIST WITH MEAN=2.5 & STD) ***************************/
 double* gen_rand(int N) 
