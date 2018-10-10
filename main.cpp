@@ -23,11 +23,13 @@ int main(int argc, char *argv[])
 {
   auto start = std::chrono::high_resolution_clock::now();
 
+  int N=1000;
+   try{
+      if (argc > 1)
+        N=std::stoi(argv[1]);
+    }
+    catch (std::invalid_argument iaex) { }
    
-   int N=1000;
-   if (argc > 1)
-      N=std::stoi(argv[1]);
-
    std::cout << "Creating matrixes A,B and C of size N = " << N << std::endl << std::endl;
    
    Matrix A = Matrix(N,N,gen_rand(N*N));
